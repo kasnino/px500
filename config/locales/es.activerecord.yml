@@ -1,0 +1,13 @@
+es:
+  activerecord:
+   models:
+     image: 'imagen'
+    
+   attributes:
+     image:
+         name: 'Nombre'
+         description: 'Descripcion'
+         category: 'Categorias'
+         tags: 'Etiquetas'
+         photo: 'Foto'
+

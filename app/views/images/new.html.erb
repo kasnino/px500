@@ -1,0 +1,41 @@
+<%- model_name = @image.class.model_name.human%>
+
+<h1><%= t('.title', model: model_name) %></h1>
+
+<%= form_for @image, builder: CustomFormBuilder do |form| %>
+<%= form.form_error %>
+
+<div class="field">
+	
+	<%= form.label :name%>
+	<%= form.text_field :name%>
+	<%= form.field_error :name %>
+
+</div>
+
+<div class="field">
+	<%= form.label :decription %>
+	<%= form.text_area :decription %>
+
+</div>
+
+<div class="field">
+	<%= form.label :category%>
+	<%= form.collection_select :category, image_categories, :last, :first%>
+</div>
+
+<div class="field">
+	<%= form.label :tags%>
+	<%= form.text_field :tags%>
+</div>
+
+<div class="field">
+	<%= form.label :photo%>
+	<%= form.file_field :photo%>
+</div>
+
+<div class="field">
+	<%= form.submit%>
+</div>
+
+<% end %>

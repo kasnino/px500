@@ -1,0 +1,24 @@
+es:
+  categories:
+     portrait: 'Retrato'
+     landscape: 'Panorama'
+     city_exploration: 'Explorando la ciudad'
+     nature: 'Naturaleza'
+     animals: 'Animales'
+
+  images:
+    index:
+       title: 'Pagina de kas'
+       new_link: 'Nueva imagen' 
+    
+    new:
+       title: 'Aqui %{model}'
+       form:
+          error: 'Ha ocurrido un error al cargar la %{model} verifica el formulario'
+    create:
+       title: 'Cargoo'
+       created: 'Se Cargo Correctamente la %{model}'
+  devise:
+    new:
+      user_email: 'kasnino'
+      email: 'aqui'
