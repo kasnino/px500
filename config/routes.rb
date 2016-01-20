@@ -1,9 +1,18 @@
 Rails.application.routes.draw do
+  
+  devise_for :views
+devise_for :users
+get '/imagenes' => 'images#index'
+
+get '/imagenes/new' => 'images#new', as: 'new_image'
+
+resources :images, only: [:index, :new, :create], path: '/imagenes'
+                #ir al controller de images y ejecutar index
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root to: 'images#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
